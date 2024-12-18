@@ -1,0 +1,85 @@
+﻿@model CourWork2024.Models.Car
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div class="card mb-3" style="max-width:auto;">
+    <div class="row g-0">
+        <div class="col-md-8">
+            <img src="@Url.Content("~/images/"+Model.Picture.ImagePath)"
+                 alt="Trendy Pants and Shoes"
+                 class="img-fluid rounded-start-md-7"  />
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.mileage)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.mileage)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.FabDate)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.FabDate)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Cost)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Cost)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Body)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Body.ID)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Color)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Color.Name)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.GearBox)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.GearBox.ID)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Model)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Model.Name)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Picture)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Picture.Id)
+                    </dd>
+                </dl>
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+                    <a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
